@@ -12,6 +12,7 @@ CREATE TABLE addresses (
     "userId" INTEGER NOT NULL,
     FOREIGN KEY ("userId") REFERENCES users("id") ON DELETE CASCADE
 );
+/* id, name, email, id, street, number, userId */
 */
 
 /* JOIN */
@@ -22,7 +23,7 @@ JOIN addresses ON users."id" = addresses."userId";
 SELECT users."id" AS "userId", 
 users."name" AS "userName",
 users."email" AS "userEmail",
-addresses."id" AS "addressID",
+addresses."id" AS "addressId",
 addresses."street",
 addresses."number"
 FROM users
